@@ -3,7 +3,6 @@ from flask_login import UserMixin
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from sqlalchemy import desc
-from flask_migrate import Migrate
 import os
 import re
 
@@ -12,7 +11,6 @@ server.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://gcschdktpavmlu:418d2ed5d4
 server.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 db = SQLAlchemy(server)
-migrate = Migrate(server, db)
 ma = Marshmallow(server)
 
 class User(db.Model,UserMixin):
