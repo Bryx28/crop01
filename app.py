@@ -6,6 +6,7 @@ from sqlalchemy import desc
 
 server = Flask(__name__)
 server.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://gcschdktpavmlu:418d2ed5d4ad02e56c6480f13fc2637b0db7297b4d1305725ecbc59c50374e13@ec2-54-167-152-185.compute-1.amazonaws.com:5432/d8dqi0ea11vu4h'
+server.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 db = SQLAlchemy(server)
 ma = Marshmallow(server)
