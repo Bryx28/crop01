@@ -25,8 +25,6 @@ class User(db.Model,UserMixin):
     def  __repr__(self):
         return f"User({self.username} - {self.user_fname} {self.user_lname})"
 
-db.create_all()
-
 class UserSchema(ma.Schema):
     class Meta:
         fields = ("user_id", "user_image", "user_fname", "user_mname", 
