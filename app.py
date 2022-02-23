@@ -73,3 +73,6 @@ def load_user(user_id):
     exist = User.query.get(int(user_id))
     user  = user_schema.dump(exist)
     return user_schema.jsonify(user) 
+
+if __name__ == "__main__":
+    server.run()
